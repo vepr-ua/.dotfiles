@@ -1,5 +1,5 @@
 tap "revent-studio/tap"
-brew gfb
+brew "gfb"
 
 brew "neovim"
 brew "fzf"
