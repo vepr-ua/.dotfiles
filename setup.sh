@@ -41,8 +41,8 @@ mkdir -p $TMUX
 log_start "🔗 Symlinking dotfiles..."
 symlink $DOT/zsh/.zshrc $HOME/.zshrc
 symlink $DOT/zsh/.zprofile $HOME/.zprofile
-symlink $DOT/.tmux/.tmux.conf $TMUX/tmux.conf
-symlink $DOT/tmux/.tmux.conf.local $TMUX/tmux.conf.local
+symlink $DOT/tmux/tmux.conf $TMUX/tmux.conf
+symlink $DOT/tmux/tmux.conf.local $TMUX/tmux.conf.local
 symlink $DOT/.gitconfig $HOME/.gitconfig
 if ! test -e $LOCAL/bin/scripts; then
     symlink $DOT/bin/scripts $LOCAL/bin
@@ -80,6 +80,14 @@ if ! test -e $CONFIG/nvim; then
     log_end "nvim config setup"
 else
     log_end "nvim config detected"
+fi
+
+log_start "🚚 Installing tmux package manager..."
+if ! test -e $CONFIG/tmux/plugins; then
+    git clone https://github.com/tmux-plugins/tpm $CONFIG/tmux/plugins/tpm
+    log_end "tpm installed"
+else
+   log_end "tpm installation detected"
 fi
 
 log_end "🎉 Done!"

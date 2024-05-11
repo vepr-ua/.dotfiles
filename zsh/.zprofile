@@ -13,3 +13,6 @@ export BREWFILE=$DOT/Brewfile
 export BIN=$DOT/bin/scripts
 export PATH="$BIN:$PATH"
 export GOPATH=$HOME/go
+
+# Update the location of TMUX confg
+export XDG_CONFIG_HOME=$CONFIG
