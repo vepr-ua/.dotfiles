@@ -10,4 +10,4 @@ brew "jq"
 brew "imagemagick"
 brew "rustup"
 brew "go"
-
+brew "ripgrep"
