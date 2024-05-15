@@ -6,6 +6,13 @@ return {
       require "configs.conform"
     end,
   },
+  {
+    "brenoprata10/nvim-highlight-colors",
+    config = function()
+      require "configs.nvim-highlight-colors"
+    end,
+    lazy = false,
+  },
 
   -- These are some examples, uncomment them if you want to see them work!
   -- {
