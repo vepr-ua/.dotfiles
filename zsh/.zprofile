@@ -16,3 +16,11 @@ export GOPATH=$HOME/go
 
 # Update the location of TMUX confg
 export XDG_CONFIG_HOME=$CONFIG
+
+# Add a scripts in the dev directory fer fast access
+export PATH="$HOME/dev/bin:$PATH"
+
+# Aliases
+
+# Quickly source profile
+alias szp="source $HOME/.zprofile"
