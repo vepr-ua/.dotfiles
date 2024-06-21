@@ -24,3 +24,6 @@ export PATH="$HOME/dev/bin:$PATH"
 
 # Quickly source profile
 alias szp="source $HOME/.zprofile"
+
+# Source Machine Specific Environment
+source $HOME/.zshenv
