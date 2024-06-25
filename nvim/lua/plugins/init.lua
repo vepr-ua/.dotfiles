@@ -21,7 +21,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("nvchad.configs.lspconfig").defaults()
+      -- Commented out the nvchad defaults as they conflict with lsp-zero
+      -- require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },
@@ -31,13 +32,13 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = {
+     ensure_installed = {
         "lua-language-server",
         "html-lsp",
+        "svelte",
         "css-lsp",
         "rust_analyzer",
-        "tsserver",
-        "svelte",
+        "tsserver"
       },
     },
   },
