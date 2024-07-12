@@ -24,3 +24,7 @@
   editor = nvim
 [diff]
 	external = difft
+[push]
+	autoSetupRemote = true
+[pull]
+	rebase = false
