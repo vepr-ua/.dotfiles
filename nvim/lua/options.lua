@@ -7,3 +7,4 @@ local o = vim.o
 
 o.relativenumber = true
 o.termguicolors = true
+
