@@ -17,7 +17,23 @@ return {
     end,
     lazy = false,
   },
-  -- These are some examples, uncomment them if you want to see them work!
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    opts = {},
+    lazy = false,
+  },
+  {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
+    lazy = false,
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -32,13 +48,13 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-     ensure_installed = {
+      ensure_installed = {
         "lua-language-server",
         "html-lsp",
         "svelte",
         "css-lsp",
         "rust_analyzer",
-        "tsserver"
+        "tsserver",
       },
     },
   },
@@ -58,6 +74,7 @@ return {
   },
   {
     "sindrets/diffview.nvim",
+    lazy = false,
   },
   {
     "folke/trouble.nvim",
@@ -94,6 +111,25 @@ return {
         "<cmd>Trouble qflist toggle<cr>",
         desc = "Quickfix List (Trouble)",
       },
+    },
+  },
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+    lazy = false,
+  },
+  {
+    "OXY2DEV/markview.nvim",
+    ft = "markdown",
+
+    dependencies = {
+      -- You may not need this if you don't lazy load
+      -- Or if the parsers are in your $RUNTIMEPATH
+      "nvim-treesitter/nvim-treesitter",
+
+      "nvim-tree/nvim-web-devicons",
     },
   },
 }
