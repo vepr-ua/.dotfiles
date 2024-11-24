@@ -1,6 +1,6 @@
 [user]
-	email = maks@revent.studio
-	username = partisan-bobryk
+  email = maks@revent.studio
+  username = RustyKozak
 	name = Maks Yadvinskyy
 [init]
 	defaultBranch = main
@@ -23,7 +23,9 @@
 [core]
   editor = nvim
 [diff]
-	external = difft
+  external = nvimdiff
+[difftool "nvimdiff"]
+  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [push]
 	autoSetupRemote = true
 [pull]
