@@ -1,6 +1,5 @@
 [user]
-  email = maks@revent.studio
-  username = RustyKozak
+  username = vepr-ua
 	name = Maks Yadvinskyy
 [init]
 	defaultBranch = main
@@ -20,12 +19,22 @@
   res = !git reset --hard
   done = !git push origin HEAD
   log = history --oneline
+
 [core]
   editor = nvim
-[diff]
-  external = nvimdiff
-[difftool "nvimdiff"]
-  cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  dark = true      # or light = true, or omit for auto-detection
+  line-numbers = true
+
+[merge]
+  conflictstyle = zdiff3
+
 [push]
 	autoSetupRemote = true
 [pull]
