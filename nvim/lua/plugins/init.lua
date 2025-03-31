@@ -69,6 +69,9 @@ return {
         "css",
         "rust",
         "bash",
+        "svelte",
+        "typescript",
+        "javascript"
       },
     },
   },
