@@ -54,7 +54,7 @@ return {
         "svelte",
         "css-lsp",
         "rust_analyzer",
-        "tsserver",
+        "ts_ls",
       },
     },
   },
@@ -71,7 +71,8 @@ return {
         "bash",
         "svelte",
         "typescript",
-        "javascript"
+        "javascript",
+        "go"
       },
     },
   },
@@ -135,4 +136,8 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
   },
+  {
+    "tpope/vim-sleuth",
+    lazy = false,
+  }
 }
