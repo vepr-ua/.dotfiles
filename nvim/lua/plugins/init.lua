@@ -72,6 +72,7 @@ return {
         "svelte",
         "typescript",
         "javascript",
+        "tsx",
         "go"
       },
     },
