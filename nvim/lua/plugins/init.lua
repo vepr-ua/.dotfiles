@@ -7,10 +7,6 @@ return {
     end,
   },
   {
-    "VonHeikemen/lsp-zero.nvim",
-    branch = "v3.x",
-  },
-  {
     "brenoprata10/nvim-highlight-colors",
     config = function()
       require "configs.nvim-highlight-colors"
@@ -38,7 +34,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       -- Commented out the nvchad defaults as they conflict with lsp-zero
-      -- require("nvchad.configs.lspconfig").defaults()
+      require("nvchad.configs.lspconfig").defaults()
       require "configs.lspconfig"
     end,
   },

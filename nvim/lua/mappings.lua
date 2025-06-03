@@ -7,9 +7,6 @@ require "nvchad.mappings"
 
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "CMD enter command mode" })
-map("i", "jk", "<ESC>")
-
 -- Pane management
 map("n", "<leader>|", ":vsplit <cr>", { desc = "Split pane vertically" })
 map("n", "<leader>-", ":split <cr>", { desc = "Split pane horizontally "})
@@ -21,3 +18,4 @@ map("n", "<leader>xq", ":TodoQuickFix<cr>", { desc = "Open quickfix list to show
 
 -- Search and replace 
 map("v", "<C-r>", "hy:%s/<C-r>h//gc<left><left><left>")
+
