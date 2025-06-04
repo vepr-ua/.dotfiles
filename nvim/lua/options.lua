@@ -10,6 +10,9 @@ o.termguicolors = true
 
 -- Show whitespaces
 o.list = true
-o.listchars="tab:↠ ,trail:.,extends:#,nbsp:."
+o.listchars = "tab:↠ ,trail:.,extends:#,nbsp:."
 o.shiftwidth = 0
 o.expandtab = false
+--
+-- o.spell = true
+-- o.spelllang = "en_us"

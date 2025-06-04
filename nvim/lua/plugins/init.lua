@@ -43,35 +43,38 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    opts = {
-      ensure_installed = {
-        "lua-language-server",
-        "html-lsp",
-        "svelte",
-        "css-lsp",
-        "rust_analyzer",
-        "ts_ls",
-      },
-    },
+    config = function()
+      require "configs.mason-lspconfig"
+    end,
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "rust",
-        "bash",
-        "svelte",
-        "typescript",
-        "javascript",
-        "tsx",
-        "go"
-      },
-    },
+    config = function()
+      require "configs.nvim-treesitter"
+    end,
+  },
+  {
+    "nvimtools/none-ls.nvim",
+    event = "VeryLazy",
+    depends = { "davidmh/cspell.nvim" },
+    opts = function(_, opts)
+      local cspell = require("cspell")
+
+      opts.sources = opts.sources or {}
+      table.insert(
+        opts.sources,
+        cspell.diagnostics.with({
+          diagnostics_postprocess = function(diagnostic)
+            diagnostic.severity = vim.diagnostic.severity.HINT
+          end,
+        })
+      )
+      table.insert(opts.sources, cspell.code_actions)
+    end,
+  },
+  {
+    "davidmh/cspell.nvim",
+    dependencies = { "nvimtools/none-ls.nvim" },
   },
   {
     "sindrets/diffview.nvim",
@@ -136,5 +139,5 @@ return {
   {
     "tpope/vim-sleuth",
     lazy = false,
-  }
+  },
 }
