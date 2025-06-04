@@ -43,33 +43,66 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require "configs.mason-lspconfig"
-    end,
+    opt = {
+      ensure_installed = {
+        "lua-language-server",
+        "html-lsp",
+        "svelte-language-server",
+        "css-lsp",
+        "rust_analyzer",
+        "ts_ls",
+        "cspell",
+      },
+    },
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require "configs.nvim-treesitter"
-    end,
+    opt = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "rust",
+        "bash",
+        "svelte",
+        "typescript",
+        "javascript",
+        "tsx",
+        "go",
+      },
+    },
   },
   {
     "nvimtools/none-ls.nvim",
     event = "VeryLazy",
     depends = { "davidmh/cspell.nvim" },
     opts = function(_, opts)
-      local cspell = require("cspell")
+      local cspell = require "cspell"
 
       opts.sources = opts.sources or {}
       table.insert(
         opts.sources,
-        cspell.diagnostics.with({
+        cspell.diagnostics.with {
           diagnostics_postprocess = function(diagnostic)
             diagnostic.severity = vim.diagnostic.severity.HINT
           end,
-        })
+          extra_args = {
+            "--config",
+            vim.fn.expand "~/cspell.json",
+          },
+        }
       )
-      table.insert(opts.sources, cspell.code_actions)
+      table.insert(
+        opts.sources,
+        cspell.code_actions.with {
+          extra_args = {
+            "--config",
+            vim.fn.expand "~/cspell.json",
+          },
+        }
+      )
     end,
   },
   {
