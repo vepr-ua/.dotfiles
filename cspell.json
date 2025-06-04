@@ -4,10 +4,14 @@
   "ignorePaths": ["**/node_modules/**", "dist/**", ".git/**"],
   "dictionaryDefinitions": [
     {
-      "name": "custom-dict",
+      "name": "global-dict",
       "path": "./dict/custom-words.txt",
+      "addWords": true
+    },{
+      "name": "local-dict",
+      "path": "~/cspell.local.txt",
       "addWords": true
     }
   ],
-  "dictionaries": ["custom-dict"]
+  "dictionaries": ["global-dict", "local-dict"]
 }
