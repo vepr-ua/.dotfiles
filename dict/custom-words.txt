@@ -1,0 +1,9 @@
+NvChad
+LuaJIT
+bufnr
+Maks
+Yadvinskyy
+vepr
+nvim
+iterm
+lspconfig

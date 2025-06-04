@@ -1,13 +1,13 @@
 [user]
   username = vepr-ua
-	name = Maks Yadvinskyy
+  name = Maks Yadvinskyy
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
 [alias]
   s = status
   co = checkout
@@ -36,6 +36,6 @@
   conflictstyle = zdiff3
 
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
 [pull]
-	rebase = false
+  rebase = false

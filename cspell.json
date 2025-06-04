@@ -1,0 +1,13 @@
+{
+  "language": "en",
+  "allowCompoundWords": true,
+  "ignorePaths": ["**/node_modules/**", "dist/**", ".git/**"],
+  "dictionaryDefinitions": [
+    {
+      "name": "custom-dict",
+      "path": "./dict/custom-words.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["custom-dict"]
+}

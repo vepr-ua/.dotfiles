@@ -19,3 +19,5 @@ map("n", "<leader>xq", ":TodoQuickFix<cr>", { desc = "Open quickfix list to show
 -- Search and replace 
 map("v", "<C-r>", "hy:%s/<C-r>h//gc<left><left><left>")
 
+-- Code Actions Binding
+map({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action"})

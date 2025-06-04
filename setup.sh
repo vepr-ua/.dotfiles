@@ -44,6 +44,7 @@ symlink $DOT/zsh/.zprofile $HOME/.zprofile
 symlink $DOT/tmux/tmux.conf $TMUX/tmux.conf
 symlink $DOT/tmux/tmux.conf.local $TMUX/tmux.conf.local
 symlink $DOT/.gitconfig $HOME/.gitconfig
+symlink $DOT/cspell.json $HOME/cspell.json
 if ! test -e $LOCAL/bin/scripts; then
     symlink $DOT/bin/scripts $LOCAL/bin
 fi
