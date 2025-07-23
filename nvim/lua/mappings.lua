@@ -21,3 +21,6 @@ map("v", "<C-r>", "hy:%s/<C-r>h//gc<left><left><left>")
 
 -- Code Actions Binding
 map({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action"})
+
+-- Markview toggle
+map("n", "<leader>mv", ":Markview toggle<cr>", { desc = "Toggle Markview" })

@@ -5,7 +5,7 @@
   "dictionaryDefinitions": [
     {
       "name": "global-dict",
-      "path": "./dict/custom-words.txt",
+      "path": "~/.dotfiles/dict/custom-words.txt",
       "addWords": true
     },{
       "name": "local-dict",

@@ -7,3 +7,6 @@ vepr
 nvim
 iterm
 lspconfig
+sadasfasd
+cssls
+gopls
