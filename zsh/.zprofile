@@ -20,6 +20,9 @@ export XDG_CONFIG_HOME=$CONFIG
 # Add a scripts in the dev directory fer fast access
 export PATH="$HOME/dev/bin:$PATH"
 
+# Point GPG to the current terminal
+export GPG_TTY=$(tty)
+
 # Aliases
 
 # Quickly source profile

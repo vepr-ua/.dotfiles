@@ -1,6 +1,5 @@
 [user]
-  username = vepr-ua
-  name = Maks Yadvinskyy
+  useConfigOnly = true
 [init]
   defaultBranch = main
 [filter "lfs"]
@@ -19,6 +18,7 @@
   res = !git reset --hard
   done = !git push origin HEAD
   log = history --oneline
+  identity = "! git config user.name \"$(git config user.$1.name)\"; git config user.email \"$(git config user.$1.email)\"; git config user.signingkey \"$(git config user.$1.signingkey)\"; :"
 
 [core]
   editor = nvim
@@ -39,3 +39,7 @@
   autoSetupRemote = true
 [pull]
   rebase = false
+[commit]
+  gpgsign = true
+[include]
+  path = "~/.git-identities/profiles"
