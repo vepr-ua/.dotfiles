@@ -86,6 +86,7 @@ return {
     depends = { "davidmh/cspell.nvim" },
     opts = function(_, opts)
       local cspell = require "cspell"
+      local nls = require "null-ls"
 
       opts.sources = opts.sources or {}
       table.insert(
@@ -109,6 +110,7 @@ return {
           },
         }
       )
+      table.insert(opts.sources, nls.builtins.formatting.prettier)
     end,
   },
   {
