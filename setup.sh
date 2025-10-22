@@ -38,6 +38,9 @@ TMUX=$CONFIG/tmux
 mkdir -p $CONFIG
 mkdir -p $TMUX
 
+# Make directory for ghostty 
+mkdir -p $CONFIG/ghostty
+
 log_start "🔗 Symlinking dotfiles..."
 symlink $DOT/zsh/.zshrc $HOME/.zshrc
 symlink $DOT/zsh/.zprofile $HOME/.zprofile
@@ -45,6 +48,7 @@ symlink $DOT/tmux/tmux.conf $TMUX/tmux.conf
 symlink $DOT/tmux/tmux.conf.local $TMUX/tmux.conf.local
 symlink $DOT/.gitconfig $HOME/.gitconfig
 symlink $DOT/cspell.json $HOME/cspell.json
+symlink $DOT/ghostty/config $CONFIG/ghostty/config
 if ! test -e $LOCAL/bin/scripts; then
     symlink $DOT/bin/scripts $LOCAL/bin
 fi

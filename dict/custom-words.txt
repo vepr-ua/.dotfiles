@@ -10,3 +10,4 @@ lspconfig
 sadasfasd
 cssls
 gopls
+catppuccin

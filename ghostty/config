@@ -1,0 +1,14 @@
+# Ghostty Config
+# https://ghostty.org/docs/config 
+#
+# All possible configurations:
+# https://github.com/ghostty-org/ghostty/blob/main/src/config/Config.zig
+
+# Theme
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+
+# Font 
+font-family = "Monaco"
+font-size = 13
+
+
