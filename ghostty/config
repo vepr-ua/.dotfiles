@@ -10,5 +10,11 @@ theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 # Font 
 font-family = "Monaco"
 font-size = 13
+font-thicken = true
 
+# Cursor
+cursor-style = "underline"
+cursor-style-blink = true
 
+# Shell integrations features
+shell-integration-features = cursor,ssh-env,ssh-terminfo
