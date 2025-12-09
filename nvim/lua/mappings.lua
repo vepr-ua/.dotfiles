@@ -24,3 +24,6 @@ map({"n", "v"}, "<leader>ca", vim.lsp.buf.code_action, { desc = "Code action"})
 
 -- Markview toggle
 map("n", "<leader>mv", ":Markview toggle<cr>", { desc = "Toggle Markview" })
+
+-- Show full diagnostics on hover (cursor hold)
+map("n", "gl", vim.diagnostic.open_float, { desc = "Show full diagnostic"})

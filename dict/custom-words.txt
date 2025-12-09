@@ -11,3 +11,4 @@ sadasfasd
 cssls
 gopls
 catppuccin
+mapboxgl
