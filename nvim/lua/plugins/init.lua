@@ -181,4 +181,10 @@ return {
     "tpope/vim-sleuth",
     lazy = false,
   },
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      return vim.tbl_deep_extend("force", require "nvchad.configs.telescope", require "configs.telescope")
+    end,
+  },
 }
