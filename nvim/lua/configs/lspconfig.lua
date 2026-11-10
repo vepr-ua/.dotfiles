@@ -1,22 +1,14 @@
-local on_attach = require("nvchad.configs.lspconfig").on_attach
-local on_init = require("nvchad.configs.lspconfig").on_init
-local capabilities = require("nvchad.configs.lspconfig").capabilities
+-- Your custom configs/lspconfig.lua file
+local nvlsp = require "nvchad.configs.lspconfig"
 
-local lspconfig = require "lspconfig"
-local servers = { "html", "cssls", "rust_analyzer", "svelte", "volar", "tailwindcss", "gopls", "graphql", "sqlls"}
+-- 1. Apply NvChad's default on_attach and capabilities GLOBALLY to all servers
+vim.lsp.config('*', {
+  capabilities = nvlsp.capabilities,
+  on_init = nvlsp.on_init,
+})
 
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = on_attach,
-    on_init = on_init,
-    capabilities = capabilities,
-  }
-end
+-- 2. Define your list of language servers
+local servers = { "html", "cssls", "pyright", "ts_ls" }
 
--- typescript
-lspconfig.ts_ls.setup {
-  on_attach = on_attach,
-  on_init = on_init,
-  capabilities = capabilities,
-}
+-- 3. Simply enable them natively
+vim.lsp.enable(servers)
