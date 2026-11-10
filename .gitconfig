@@ -50,3 +50,5 @@
 
 [include]
   path = "~/.git-identities/profiles"
+[mergetool]
+	keepBackup = false

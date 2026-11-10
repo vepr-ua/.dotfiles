@@ -12,3 +12,4 @@ cssls
 gopls
 catppuccin
 mapboxgl
+duckdb

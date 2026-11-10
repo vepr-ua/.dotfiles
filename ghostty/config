@@ -5,7 +5,7 @@
 # https://github.com/ghostty-org/ghostty/blob/main/src/config/Config.zig
 
 # Theme
-theme = dark:Catppuccin Mocha,light:Catppuccin Latte
+theme = dark:Catppuccin Mocha,light: Catppuccin Mocha
 
 # Font 
 font-family = "Monaco"
